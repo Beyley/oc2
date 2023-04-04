@@ -48,6 +48,8 @@ public final class Items {
         new MemoryItem(4 * Constants.MEGABYTE));
     public static final RegistryObject<MemoryItem> MEMORY_LARGE = register("memory_large", () ->
         new MemoryItem(8 * Constants.MEGABYTE));
+    public static final RegistryObject<MemoryItem> MEMORY_EXTRALARGE = register("memory_extralarge", () ->
+        new MemoryItem(32 * Constants.MEGABYTE));
 
     public static final RegistryObject<HardDriveItem> HARD_DRIVE_SMALL = register("hard_drive_small", () ->
         new HardDriveItem(2 * Constants.MEGABYTE, DyeColor.LIGHT_GRAY));
@@ -55,6 +57,8 @@ public final class Items {
         new HardDriveItem(4 * Constants.MEGABYTE, DyeColor.GREEN));
     public static final RegistryObject<HardDriveItem> HARD_DRIVE_LARGE = register("hard_drive_large", () ->
         new HardDriveItem(8 * Constants.MEGABYTE, DyeColor.CYAN));
+    public static final RegistryObject<HardDriveItem> HARD_DRIVE_EXTRALARGE = register("hard_drive_extralarge", () ->
+        new HardDriveItem(64 * Constants.MEGABYTE, DyeColor.PURPLE));
     public static final RegistryObject<HardDriveWithExternalDataItem> HARD_DRIVE_CUSTOM = register("hard_drive_custom", () ->
         new HardDriveWithExternalDataItem(BlockDeviceDataRegistry.BUILDROOT.getId(), DyeColor.BROWN));
 
