@@ -372,6 +372,16 @@ public final class ModRecipesProvider extends RecipeProvider {
             .unlockedBy("has_disk_drive", inventoryChange(Items.DISK_DRIVE.get()))
             .save(consumer);
 
+        ShapedRecipeBuilder
+            .shaped(Items.ZIP_DISK.get())
+            .pattern("ITI")
+            .pattern("QBQ")
+            .define('D', Tags.Items.GEMS_DIAMOND)
+            .define('T', Items.TRANSISTOR.get())
+            .define('Q', Tags.Items.GEMS_QUARTZ)
+            .define('B', Items.CIRCUIT_BOARD.get())
+            .unlockedBy("has_disk_drive", inventoryChange(Items.DISK_DRIVE.get()))
+            .save(consumer);
 
         ShapedRecipeBuilder
             .shaped(Items.INVENTORY_OPERATIONS_MODULE.get())

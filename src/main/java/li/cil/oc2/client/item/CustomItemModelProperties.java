@@ -25,5 +25,7 @@ public final class CustomItemModelProperties {
             (stack, level, entity, seed) -> CustomItemColors.getColor(stack));
         ItemProperties.register(Items.FLOPPY.get(), CustomItemModelProperties.COLOR_PROPERTY,
             (stack, level, entity, seed) -> CustomItemColors.getColor(stack));
+        ItemProperties.register(Items.ZIP_DISK.get(), CustomItemModelProperties.COLOR_PROPERTY,
+            (stack, level, entity, seed) -> CustomItemColors.getColor(stack));
     }
 }
