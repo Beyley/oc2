@@ -222,6 +222,17 @@ public final class ModRecipesProvider extends RecipeProvider {
             .save(consumer);
 
         ShapedRecipeBuilder
+            .shaped(Items.MEMORY_EXTRALARGE.get(), 2)
+            .pattern("DTD")
+            .pattern(" B ")
+            .define('D', Tags.Items.INGOTS_NETHERITE)
+            .define('T', Items.TRANSISTOR.get())
+            .define('B', Items.CIRCUIT_BOARD.get())
+            .unlockedBy("has_computer", inventoryChange(Items.COMPUTER.get()))
+            .unlockedBy("has_robot", inventoryChange(Items.ROBOT.get()))
+            .save(consumer);
+
+        ShapedRecipeBuilder
             .shaped(Items.HARD_DRIVE_SMALL.get())
             .pattern("ITI")
             .pattern("EBE")
@@ -250,6 +261,18 @@ public final class ModRecipesProvider extends RecipeProvider {
             .pattern("DTD")
             .pattern("EBE")
             .define('D', Tags.Items.GEMS_DIAMOND)
+            .define('T', Items.TRANSISTOR.get())
+            .define('B', Items.CIRCUIT_BOARD.get())
+            .define('E', Tags.Items.GEMS_EMERALD)
+            .unlockedBy("has_computer", inventoryChange(Items.COMPUTER.get()))
+            .unlockedBy("has_robot", inventoryChange(Items.ROBOT.get()))
+            .save(consumer);
+
+        ShapedRecipeBuilder
+            .shaped(Items.HARD_DRIVE_EXTRALARGE.get())
+            .pattern("DTD")
+            .pattern("EBE")
+            .define('D', Tags.Items.INGOTS_NETHERITE)
             .define('T', Items.TRANSISTOR.get())
             .define('B', Items.CIRCUIT_BOARD.get())
             .define('E', Tags.Items.GEMS_EMERALD)

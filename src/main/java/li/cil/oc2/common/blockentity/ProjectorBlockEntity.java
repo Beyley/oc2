@@ -132,7 +132,7 @@ public final class ProjectorBlockEntity extends ModBlockEntity implements Tickab
 
     public void onRendering() {
         final long now = System.currentTimeMillis();
-        if (now - lastKeepAliveSentAt > 1000) {
+        if (now - lastKeepAliveSentAt > Config.projectorRefreshRateMs) {
             lastKeepAliveSentAt = now;
             Network.sendToServer(new ProjectorRequestFramebufferMessage(this));
         }

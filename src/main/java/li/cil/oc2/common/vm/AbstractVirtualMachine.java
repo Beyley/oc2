@@ -5,6 +5,7 @@ package li.cil.oc2.common.vm;
 import li.cil.ceres.api.Serialized;
 import li.cil.oc2.api.bus.device.vm.FirmwareLoader;
 import li.cil.oc2.api.bus.device.vm.VMDeviceLoadResult;
+import li.cil.oc2.common.Config;
 import li.cil.oc2.common.Constants;
 import li.cil.oc2.common.bus.CommonDeviceBusController;
 import li.cil.oc2.common.bus.RPCDeviceBusAdapter;
@@ -76,7 +77,7 @@ public abstract class AbstractVirtualMachine implements VirtualMachine {
         state.rpcAdapter = new RPCDeviceBusAdapter(state.builtinDevices.rpcSerialDevice);
         state.vmAdapter = new VMDeviceBusAdapter(state.context);
 
-        state.board.getCpu().setFrequency(Constants.CPU_FREQUENCY);
+        state.board.getCpu().setFrequency(Config.cpuFrequency);
         state.board.setBootArguments("root=/dev/vda rw");
         state.board.setStandardOutputDevice(state.builtinDevices.uart);
     }

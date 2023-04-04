@@ -7,6 +7,7 @@ import li.cil.oc2.api.bus.device.vm.event.VMInitializationException;
 import li.cil.oc2.api.bus.device.vm.event.VMInitializingEvent;
 import li.cil.oc2.api.bus.device.vm.event.VMResumedRunningEvent;
 import li.cil.oc2.api.bus.device.vm.event.VMSynchronizeEvent;
+import li.cil.oc2.common.Config;
 import li.cil.oc2.common.Constants;
 import li.cil.oc2.common.bus.RPCDeviceBusAdapter;
 import li.cil.oc2.common.vm.context.global.GlobalVMContext;
@@ -152,6 +153,6 @@ public class VMRunner implements Runnable {
     ///////////////////////////////////////////////////////////////////
 
     private static int getCyclesPerTick() {
-        return Constants.CPU_FREQUENCY / TICKS_PER_SECOND;
+        return Config.cpuFrequency / TICKS_PER_SECOND;
     }
 }
