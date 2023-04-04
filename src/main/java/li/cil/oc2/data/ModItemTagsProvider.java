@@ -51,7 +51,8 @@ public final class ModItemTagsProvider extends ItemTagsProvider {
             Items.FLASH_MEMORY_CUSTOM.get()
         );
         tag(DEVICES_FLOPPY).add(
-            Items.FLOPPY.get()
+            Items.FLOPPY.get(),
+            Items.ZIP_DISK.get()
         );
         tag(DEVICES_CARD).add(
             Items.REDSTONE_INTERFACE_CARD.get(),
