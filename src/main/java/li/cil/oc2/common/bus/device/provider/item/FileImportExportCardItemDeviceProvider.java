@@ -10,13 +10,19 @@ import li.cil.oc2.common.bus.device.provider.util.AbstractItemDeviceProvider;
 import li.cil.oc2.common.bus.device.rpc.item.FileImportExportCardItemDevice;
 import li.cil.oc2.common.capabilities.Capabilities;
 import li.cil.oc2.common.item.Items;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Optional;
 
-public final class FileImportExportCardItemDeviceProvider extends AbstractItemDeviceProvider {
+public class FileImportExportCardItemDeviceProvider extends AbstractItemDeviceProvider {
     public FileImportExportCardItemDeviceProvider() {
         super(Items.FILE_IMPORT_EXPORT_CARD);
+    }
+
+    public FileImportExportCardItemDeviceProvider(RegistryObject<Item> item) {
+        super(item);
     }
 
     ///////////////////////////////////////////////////////////////////

@@ -55,6 +55,7 @@ public final class ModItemModelProvider extends ItemModelProvider {
         simple(Items.INVENTORY_OPERATIONS_MODULE);
         simple(Items.BLOCK_OPERATIONS_MODULE);
         simple(Items.NETWORK_TUNNEL_MODULE);
+        simple(Items.FILE_IMPORT_EXPORT_MODULE);
 
         simple(Items.TRANSISTOR);
         simple(Items.CIRCUIT_BOARD);

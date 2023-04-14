@@ -416,6 +416,17 @@ public final class ModRecipesProvider extends RecipeProvider {
             .unlockedBy("has_robot", inventoryChange(Items.ROBOT.get()))
             .save(consumer);
 
+        ShapedRecipeBuilder
+            .shaped(Items.FILE_IMPORT_EXPORT_MODULE.get())
+            .pattern("TEG")
+            .pattern(" B ")
+            .define('T', Items.TRANSISTOR.get())
+            .define('E', net.minecraft.world.item.Items.PAPER)
+            .define('G', Tags.Items.INGOTS_GOLD)
+            .define('B', Items.CIRCUIT_BOARD.get())
+            .unlockedBy("has_robot", inventoryChange(Items.ROBOT.get()))
+            .save(consumer);
+
 
         ShapedRecipeBuilder
             .shaped(Items.TRANSISTOR.get(), 12)

@@ -82,6 +82,7 @@ public final class Items {
     public static final RegistryObject<Item> INVENTORY_OPERATIONS_MODULE = register("inventory_operations_module");
     public static final RegistryObject<Item> BLOCK_OPERATIONS_MODULE = register("block_operations_module", BlockOperationsModule::new);
     public static final RegistryObject<Item> NETWORK_TUNNEL_MODULE = register("network_tunnel_module", NetworkTunnelItem::new);
+    public static final RegistryObject<Item> FILE_IMPORT_EXPORT_MODULE = register("file_import_export_module");
 
     public static final RegistryObject<Item> TRANSISTOR = register("transistor", ModItem::new);
     public static final RegistryObject<Item> CIRCUIT_BOARD = register("circuit_board", ModItem::new);

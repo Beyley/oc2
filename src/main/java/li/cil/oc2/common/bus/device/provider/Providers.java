@@ -46,6 +46,7 @@ public final class Providers {
         registry.accept("inventory_operations_module", InventoryOperationsModuleDeviceProvider::new);
         registry.accept("block_operations_module", BlockOperationsModuleDeviceProvider::new);
         registry.accept("network_tunnel_module", NetworkTunnelModuleItemDeviceProvider::new);
+        registry.accept("file_import_export_module", FileImportExportModuleItemDeviceProvider::new);
 
         registry.accept("item_stack/capability", ItemStackCapabilityDeviceProvider::new);
         registry.accept("energy_storage", EnergyStorageItemDeviceProvider::new);
