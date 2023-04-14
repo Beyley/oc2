@@ -28,7 +28,7 @@ import java.util.Set;
 import java.util.WeakHashMap;
 
 public final class FileImportExportCardItemDevice extends AbstractItemRPCDevice implements DocumentedDevice {
-    public static final int MAX_TRANSFERRED_FILE_SIZE = 1024 * Constants.KILOBYTE;
+    public static final int MAX_TRANSFERRED_FILE_SIZE = 32 * Constants.MEGABYTE;
 
     private static final String BEGIN_EXPORT_FILE = "beginExportFile";
     private static final String WRITE_EXPORT_FILE = "writeExportFile";
