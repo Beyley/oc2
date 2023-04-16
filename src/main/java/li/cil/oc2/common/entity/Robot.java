@@ -180,6 +180,9 @@ public final class Robot extends Entity implements li.cil.oc2.api.capabilities.R
         if (capability == Capabilities.robot()) {
             return LazyOptional.of(() -> this).cast();
         }
+        if (capability == Capabilities.terminalUserProvider()) {
+            return LazyOptional.of(() -> this).cast();
+        }
 
         final LazyOptional<T> optional = super.getCapability(capability, side);
         if (optional.isPresent()) {
