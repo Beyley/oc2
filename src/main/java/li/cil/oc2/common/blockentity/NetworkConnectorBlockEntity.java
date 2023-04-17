@@ -53,7 +53,7 @@ public final class NetworkConnectorBlockEntity extends ModBlockEntity implements
 
     private static final int RETRY_UNLOADED_CHUNK_INTERVAL = TickUtils.toTicks(Duration.ofSeconds(5));
     private static final int MAX_CONNECTION_COUNT = 2;
-    private static final int MAX_CONNECTION_DISTANCE = 16;
+    private static final int MAX_CONNECTION_DISTANCE = 64;
     private static final int BYTES_PER_TICK = 64 * 1024 / TickUtils.toTicks(Duration.ofSeconds(1)); // bytes / sec -> bytes / tick
     private static final int MIN_ETHERNET_FRAME_SIZE = 42;
     private static final int TTL_COST = 1;

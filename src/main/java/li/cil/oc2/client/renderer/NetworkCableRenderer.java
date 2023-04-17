@@ -47,7 +47,7 @@ public final class NetworkCableRenderer {
     private static final int CABLE_SWING_INTERVAL = 8000;
     private static final float CABLE_HANG_MIN = 0.1f;
     private static final float CABLE_HANG_MAX = 0.5f;
-    private static final float CABLE_MAX_LENGTH = 64f;
+    private static final float CABLE_MAX_LENGTH = 32f;
     private static final Vector3f CABLE_COLOR = new Vector3f(0.0f, 0.33f, 0.4f);
 
     private static final Set<NetworkConnectorBlockEntity> connectors = Collections.newSetFromMap(new WeakHashMap<>());
