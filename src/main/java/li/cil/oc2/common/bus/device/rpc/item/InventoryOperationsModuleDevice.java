@@ -21,6 +21,7 @@ import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.items.ItemStackHandler;
 
 import javax.annotation.Nullable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -194,6 +195,28 @@ public final class InventoryOperationsModuleDevice extends AbstractItemRPCDevice
         final Direction direction = RobotOperationSide.toGlobal(entity, side);
         return getItemStackHandlersInDirection(direction).findFirst().map(handler ->
             takeFromInventory(count, handler, fromSlot)).orElse(0);
+    }
+
+    @Callback
+    public ArrayList<ItemStack> getItems(@Parameter("side") final RobotOperationSide side) {
+        final Direction direction = RobotOperationSide.toGlobal(entity, side);
+        Optional<IItemHandler> handlerOpt = getItemStackHandlersInDirection(direction).findFirst();
+        if(handlerOpt.isEmpty()) return new ArrayList<>(0);
+
+        IItemHandler handler = handlerOpt.get();
+        int slots = handler.getSlots();
+
+        ArrayList<ItemStack> stacks = new ArrayList<>(slots);
+
+        for (int i = 0; i < slots; i++) {
+            ItemStack stack = handler.getStackInSlot(i);
+            // we have to add every stack here, including empty stacks
+            // if not then it breaks lua because there are gaps in the array
+            // /usr/bin/lua: /mnt/builtin/lib/lua/devices.lua:253: Index: 11, Size: 2
+            stacks.add(i, stack);
+        }
+
+        return stacks;
     }
 
     ///////////////////////////////////////////////////////////////////
